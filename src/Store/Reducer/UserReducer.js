@@ -1,8 +1,8 @@
-import { ACTION_UTILS } from './../../Commons/Constants';
+import  ACTION  from './../../Commons/Constants';
 let initialState = null;
 const UserReducer = (state = initialState, action) => {
   switch (action.type) {
-    case ACTION_UTILS.SET_CREDENTIALS:
+    case ACTION.SET_CREDENTIALS:
       state = action.payload;
       return state;
   }

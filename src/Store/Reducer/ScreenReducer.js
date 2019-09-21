@@ -1,4 +1,4 @@
-import { ACTION_UTILS } from './../../Commons/Constants';
+import ACTION  from './../../Commons/Constants';
 
 let initialValue = 'home';
 const ScreenReducer = (state = initialValue,action) => {
@@ -6,12 +6,11 @@ const ScreenReducer = (state = initialValue,action) => {
   // sau khi duoc cap nhat
   console.log(action);
   switch (action.type) {
-    case ACTION_UTILS.CHANGE_SCREEN:
+    case ACTION.CHANGE_SCREEN:
       state = action.payload;
       return state;
     default: return state;
   }
-  return state;
 }
 
 export default ScreenReducer;

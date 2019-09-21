@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux"
 import * as _ from 'lodash';
-import { ACTION_UTILS } from './../../Commons/Constants';
+import  ACTION  from './../../Commons/Constants';
 
 class LoginScreen extends Component {
    state = {
@@ -38,11 +38,11 @@ class LoginScreen extends Component {
       localStorage.setItem('userLogin',JSON.stringify(_.pick(this.state, ['email'])));
       console.log(e);
       this.props.dispatch({
-        type: ACTION_UTILS.SET_CREDENTIALS,
+        type: ACTION.SET_CREDENTIALS,
         payload: _.pick(this.state,["email"])
       });
       this.props.dispatch({
-        type: ACTION_UTILS.CHANGE_SCREEN,
+        type: ACTION.CHANGE_SCREEN,
         payload: 'home'
       });
     }

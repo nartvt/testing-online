@@ -4,7 +4,7 @@ import HomeScreen from '../Screens/Home/HomeScreen';
 import LoginScreen from '../Screens/Login/LoginScreen';
 import TestScreen from '../Screens/Test/TestScreen';
 import { connect } from 'react-redux';
-
+import { ACTION } from './../Commons/Constants';
 class Layout extends Component {
   render() {
     return (
@@ -16,6 +16,15 @@ class Layout extends Component {
         <TestScreen /> */}
       </div>
     );
+  }
+  componentDidMount() {
+    let userLogin = localStorage.getItem('userLogin');
+    if (userLogin) {
+      this.props.dispatch({
+        type: 'SET_CREDENTIALS',
+        payload: JSON.parse(userLogin)
+      });
+    }
   }
   _renderScreen = () => {
     switch (this.props.screen) {

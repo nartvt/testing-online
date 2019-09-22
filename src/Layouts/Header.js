@@ -67,7 +67,7 @@ class Header extends Component {
                 <span
                   className="nav-link"
                   style={{ cursor: "pointer" }}
-                  onClick={() => this._signOut}
+                  onClick={() => this._signOut()}
                 >
                   sign Out
               </span>

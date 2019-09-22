@@ -8,7 +8,7 @@ class TestScreen extends Component {
       <div className="container">
         <h1 className="display-4 text-center">Online Test</h1>
         {this._renderQuestions()}
-        <button className='btn btn-success' onClick = {this._calcTotalPoint()}>Submit</button>
+        <button className='btn btn-success' onClick = {()=>this._calcTotalPoint()}>Submit</button>
         <p>Total point: {this.props.totalPoint}</p>
         <p>Correct answer: {this.props.correctAnswer}</p>
       </div>

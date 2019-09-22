@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import  ACTION  from './../Commons/Constants';
-const Menu = [
-  { title: "Home", slug: "home" },
-  { title: "Login", slug: "login" },
-  { title: "Test", slug: "test" }
-];
+// const Menu = [
+//   { title: "Home", slug: "home" },
+//   { title: "Login", slug: "login" },
+//   { title: "Test", slug: "test" }
+// ];
 
 class Header extends Component {
   render() {

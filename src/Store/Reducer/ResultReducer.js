@@ -1,3 +1,4 @@
+import ACTION from '../../Commons/Constants';
 let inittialState = {
   totalPoint: 0,
   correctAnswers: 0,
@@ -5,7 +6,7 @@ let inittialState = {
 }
 const ResultReducer = (state=inittialState, action) => {
   switch (action.type) {
-    case 'ADD_ANSWER':
+    case ACTION.ADD_ANSWER:
       let index = state.answers.findIndex(item => item.questionId === action.payload.questionId);
       if (index!==-1) {
         state.answers[index] = action.payload;
@@ -13,7 +14,7 @@ const ResultReducer = (state=inittialState, action) => {
         state.answers.push(action.payload);
       }
       return state;
-    case 'SET_RESULT':
+    case ACTION.SET_RESULT:
       state.totalPoint = action.payload.totalPoint;
       state.correctAnswers = action.payload.correctAnswers;
       return { ...state };

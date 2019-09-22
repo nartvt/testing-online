@@ -4,7 +4,6 @@ import HomeScreen from '../Screens/Home/HomeScreen';
 import LoginScreen from '../Screens/Login/LoginScreen';
 import TestScreen from '../Screens/Test/TestScreen';
 import { connect } from 'react-redux';
-import { ACTION } from './../Commons/Constants';
 class Layout extends Component {
   render() {
     return (

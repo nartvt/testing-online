@@ -5,6 +5,7 @@ const UserReducer = (state = initialState, action) => {
     case ACTION.SET_CREDENTIALS:
       state = action.payload;
       return state;
+  default: return state;
   }
   return state;
 };

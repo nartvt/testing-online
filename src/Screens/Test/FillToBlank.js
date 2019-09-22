@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux';
 import ACTION from '../../Commons/Constants';
 
-export default class FillToBlank extends Component {
+ class FillToBlank extends Component {
   render() {
     return (
       <div className="mb-3">
@@ -27,6 +28,8 @@ export default class FillToBlank extends Component {
         answer: {
           exact: event.target.value === ans.content
         }
-      }})
+      }
+    })
   };
 }
+export default connect()(FillToBlank);
